@@ -1,0 +1,33 @@
+<main class="main" id="gameScreen">
+  <div class="game">
+    <button class="moveBtn moveBtn--rock" value="rock">
+      <img src="../assets/icons/icon-rock.svg" alt="Rock">
+    </button>
+    <button class="moveBtn moveBtn--paper" value="paper">
+      <img src="../assets/icons/icon-paper.svg" alt="Paper">
+    </button>
+    <button class="moveBtn moveBtn--scissors" value="scissors">
+      <img src="../assets/icons/icon-scissors.svg" alt="Scissors">
+    </button>
+  </div>
+</main>
+
+<main class="result" id="resultScreen" style="display: none;">
+  <div class="result__container">
+    <div class="result__pick">
+      <p class="result__title">YOU PICKED</p>
+      <div id="userPick"></div>
+    </div>
+    
+    <div class="result__center">
+      <h2 id="resultText"></h2>
+      <button id="playAgain">PLAY AGAIN</button>
+    </div>
+    
+    <div class="result__pick">
+      <p class="result__title">THE HOUSE PICKED</p>
+      <div id="computerPick"></div>
+    </div>
+  </div>
+</main>
+

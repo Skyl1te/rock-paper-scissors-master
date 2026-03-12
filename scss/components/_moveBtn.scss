@@ -1,0 +1,123 @@
+@import '../base/variables';
+
+.moveBtn {
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+  background: white;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all .15s ease-out;
+
+  &:hover {
+    transition: all .15s ease-out;
+    animation: hit 0.25s ease;
+  
+}
+
+  &--paper {
+    bottom: 68%;
+    left: 0;
+    border: 15px solid $blue-500;
+
+    &:hover {
+        border: 16px solid $blue-700;
+        
+    }
+  }
+
+  &--scissors {
+    bottom: 68%;
+    right: 0;
+    border: 15px solid $gold-500;
+
+    &:hover {
+        border: 16px solid $gold-600;
+    }
+  }
+
+  &--rock {
+    top: 55%;
+    left: 32%;
+    border: 15px solid $red-600;
+
+    &:hover {
+        border: 16px solid $red-800;
+    }
+  }
+
+  &--lizard {
+    border: 15px solid $purple-600;
+
+    &:hover {
+        border: 16px solid $purple-700;
+    }
+  }
+
+  &--spock {
+    border: 15px solid $light-blue-400;
+
+    &:hover {
+        border: 16px solid $light-blue-500;
+    }
+  }
+
+  &__advanced {
+     &--paper {
+bottom: 43%;
+    left: 72%;
+    border: 15px solid $blue-500;
+  }
+
+  &--scissors {
+bottom: 70%;
+    right: 31%;
+    border: 15px solid $gold-500;
+  }
+
+  &--rock {
+    top: 70%;
+    left: 55%;
+    border: 15px solid $red-600;
+  }
+
+  &--lizard {
+top: 69%;
+    left: 10%;
+    border: 15px solid $purple-600;
+  }
+
+  &--spock {
+top: 17%;
+    right: 69%;
+    border: 15px solid $light-blue-400;
+  }
+  }
+
+}
+.advancedGame {
+  position: relative;
+
+  width: 400px;
+  height: 360px;
+
+  margin: 0 auto;
+
+  background-image: url("../assets/images/bg-pentagon.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes hit {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(5deg); }
+  100% { transform: scale(1); }
+}
